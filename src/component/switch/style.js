@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     width: 48px;
     height: 24px;
-    z-index: 999;
+    z-index: 998;
 `;
 export const Bloco =styled.button`
     display:flex;

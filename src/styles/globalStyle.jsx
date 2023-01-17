@@ -20,13 +20,20 @@ export const GlobalStyle = createGlobalStyle`
         transition: 500ms linear;
         
     }
+    a{
+        cursor: pointer;
+    }
     span{
         color: ${(props) => props.theme.fontColor};
     }
-    h1, h2, h3 ,h4 ,h5 ,h6{
+    h1, h2, h3 ,h4 ,h5 ,h6, input{
         color: ${props => props.theme.Color};
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
     }
-
 
     button {
     cursor: pointer;

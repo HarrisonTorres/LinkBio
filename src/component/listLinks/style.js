@@ -5,7 +5,7 @@ export const Container = styled.div`
     width:100%;
     display:flex;
     flex-direction:column;
-    z-index:988;
+    z-index:888;
 
 `;
 

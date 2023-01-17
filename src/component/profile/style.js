@@ -8,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     padding: 24px;
     gap: 1rem;
-    z-index: 999;
+    
 `;
 export const Moldura = styled.div`
     display:flex;
