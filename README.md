@@ -11,3 +11,4 @@ Styled Components
 💻 Projeto
 Perfil de cartão de visitas agregando links externos.
 
+link-bio-beta.vercel.app
