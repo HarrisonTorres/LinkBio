@@ -1,23 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { CloseButton, Container, ModalOpen } from './style';
 import { AiOutlineClose, AiOutlineUser } from "react-icons/ai";
-import CadastroModal from '../cadastro';
-import LoginModal from '../login';
-import ModalUser from '..';
 
+import ModalUser from '..';
+import ButtonEdit from '../buttonEdit';
+
+import { AuthContext } from '../../../contexts/auth';
 
 function ButtonModalUser({clickModal}) {
-    const [isOpen, setIsOpen] = useState(false)
+    
 
-    function handleOpen(){
-        setIsOpen(true)
-        console.log('true')
-    }
+    const {userOn, isOpen, handleClose, handleOpen} = useContext(AuthContext)
 
-    function handleClose(){
-        setIsOpen(false)
-        console.log('false ')
-    }
+    
 
     return (
         <Container>
@@ -34,6 +29,10 @@ function ButtonModalUser({clickModal}) {
                     <ModalUser/>
                 </>
                 }
+            {userOn && <>
+                    <ButtonEdit/>
+                </>
+            }
         </Container>
     )
 }

@@ -25,6 +25,9 @@ export const Img = styled.div`
     height: 104px;
     border-radius: 999px;
     background-color:#ccc;
+    img{
+        border-radius: 999px;
+    }
 `
 
 export const User = styled.h2`

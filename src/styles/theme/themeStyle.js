@@ -14,6 +14,7 @@ export const Light = {
     DisplayIconDark: 'none',
     DisplayIconLight: 'flex',
 
+    BoxShadow: '0px 0px 80px 12px rgba(0, 0, 0, 0.3)',
 };
  
 export const Dark = {
@@ -30,4 +31,5 @@ export const Dark = {
     DisplayIconDark: 'flex',
     DisplayIconLight: 'none',
 
+    BoxShadow: '0px 0px 80px 16px rgba(0, 0, 0, 0.9)',
 }

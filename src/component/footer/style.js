@@ -6,7 +6,7 @@ export const Text=styled.h5`
         font-weight: 400;
         font-size: 14px;
         color: ${props => props.theme.h5};
-        z-index: 999;
+        z-index: 1;
         a{
             text-decoration:none;
         }

@@ -20,7 +20,7 @@ export const Container = styled.div`
     
     z-index: 9999;
 
-    box-shadow: 0px 0px 80px 12px rgba(250, 225, 250, 0.2);
+    box-shadow: ${props => props.theme.BoxShadow};
     padding: 24px 24px ;
     span{
         color: #555;
@@ -32,7 +32,7 @@ export const Container = styled.div`
         font-size: 12px;
     }
 `;
-export const Form = styled.div`
+export const Form = styled.form`
     width: 100%;
     height: 100%;
     display:flex;
@@ -40,4 +40,8 @@ export const Form = styled.div`
     justify-content: space-evenly;
     align-items: center;
     gap: 4px;
+
+`
+export const RangeInput = styled.div`
+    width: 90%;
 `

@@ -5,7 +5,7 @@
 
  `;
 
- export const ListIconsSocial = styled.li`
+ export const ListIconsSocial = styled.ul`
     display:flex;
     flex-direction:row;
 
@@ -18,7 +18,7 @@
     
 `
 
-export const ItemIcons = styled.ul`
+export const ItemIcons = styled.li`
     width: 40px;
     height:40px;
 
@@ -26,4 +26,14 @@ export const ItemIcons = styled.ul`
     display:flex;
     justify-content:center;
     align-items:center;
+
+    .icon{
+        color: ${props => props.theme.Color};
+    }
+`
+export const Null = styled.div`
+    display: flex;
+    background-color: black;
+    width: 0px;
+    height: 00px;
 `

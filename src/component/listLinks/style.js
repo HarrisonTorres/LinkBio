@@ -9,23 +9,22 @@ export const Container = styled.div`
 
 `;
 
-export const List = styled.li`
+export const List = styled.ul`
     list-style: none;
     display:flex;
     flex-direction:column;
     justify-content:center;
     z-index:988;
+    
 `;
 
-export const ItenList = styled.ul`
+export const ItenList = styled.li`
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 16px 24px;
 
-    margin-top: 8px;
-    margin-bottom:8px;
 
     width: 100%;
     height: 56px;
@@ -47,6 +46,9 @@ export const Link = styled.a`
     font-size: 16px;
     text-decoration: none;    
     z-index:988;
+
+    margin-top: 8px;
+    margin-bottom:8px;
 `;  
 
 export const Span = styled.span`
