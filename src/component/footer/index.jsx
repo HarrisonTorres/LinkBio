@@ -4,7 +4,7 @@ import { Text } from "./style";
 function Footer (){
     return(
     <>
-        <Text>Criado Por <a>@dev_harri.s</a></Text>
+        <Text>Criado Por <a>@devharri.s</a></Text>
     </>
     )
 }

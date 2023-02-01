@@ -3,10 +3,10 @@ import React from 'react';
 
 import { Container, Button } from './style';
 
-function ButtonForm({title, onClick}) {
+function ButtonForm({disabled, title, onClick}) {
   return (
     <Container>
-        <Button onClick={onClick}>{title}</Button>
+        <Button au disabled={disabled} onClick={onClick}>{title}</Button>
     </Container>
   );
 }

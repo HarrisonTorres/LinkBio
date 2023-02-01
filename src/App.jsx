@@ -27,7 +27,7 @@ import { Dark, Light} from "./styles/theme/themeStyle"
 
 function App(){
 
-    const[theme, setTheme] = useState('Light')
+    const[theme, setTheme] = useState('')
     const themeMode = theme === 'Light' ? Light : Dark;
    
 

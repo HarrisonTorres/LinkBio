@@ -14,7 +14,7 @@ export const ElipseOne = styled.div`
     
     z-index: 0;
 
-    animation: animationBlur 15s ;
+    animation: animationBlur 12s ;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
@@ -22,10 +22,12 @@ export const ElipseOne = styled.div`
         from{
             left: 75%;
             bottom: 48%;
+            filter: blur(90px);
         }
         to{
             left: 63%;
             bottom: 46%;
+            filter: blur(200px);
         }
     }
 `;
@@ -43,7 +45,7 @@ export const ElipseTwo = styled.div`
     
     z-index: 0;
 
-    animation: animationBlur2 12s ;
+    animation: animationBlur2 9s ;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 
@@ -51,10 +53,12 @@ export const ElipseTwo = styled.div`
         from{
             right: 85%;
             top: 18%;
+            filter: blur(90px);
         }
         to{
             right: 63%;
             top: 23%;
+            filter: blur(200px);
         }
     }
 `

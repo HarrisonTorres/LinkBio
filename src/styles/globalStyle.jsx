@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     span{
         color: ${(props) => props.theme.fontColor};
     }
-    h1, h2, h3 ,h4 ,h5 ,h6, input{
+    h1, h2, h3 ,h4 ,h5 ,h6, input, p{
         color: ${props => props.theme.Color};
         font-family: 'Inter';
         font-style: normal;

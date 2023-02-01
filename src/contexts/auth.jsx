@@ -14,12 +14,10 @@ function AuthProvider({children}){
 
     function handleOpen () {
         setIsOpen(true)
-        console.log('true')
     }
     
     function handleClose() {
         setIsOpen(false)
-        console.log('false ')
     }
     
 
