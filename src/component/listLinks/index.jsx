@@ -13,7 +13,7 @@ function ListLinks(){
     const {setLinks} = useContext(RenderContext);
 
     const Alert = () => {
-        alert('Calma ai kk jaja boto link descente')
+        console.log('Redirecionando!')
     }
 
     useEffect(() => {
@@ -34,6 +34,7 @@ function ListLinks(){
             <List>
                 {links.map(item => item.id &&(
                         <Link 
+                        target={"_blank"}
                         key={item.id} 
                         href={item.link}
                         onClick={Alert}>

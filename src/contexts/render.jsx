@@ -14,9 +14,8 @@ function RenderProvider({children}){
 
     const [links, setLinks] = useState([])
 
-    console.log(links)
-
     const [social, setSocial] = useState([
+        //icon 1 = Github / icon 2 = instagram / icon 3 = linkedin / icon 4 = Youtube / icon 5 = Email
         {
             id: 1,
             icon: '1',
@@ -25,12 +24,22 @@ function RenderProvider({children}){
         {
             id: 2,
             icon: '2',
-            href: 'https://github.com/HarrisonTorres'
+            href: 'https://www.instagram.com/devharri.s'
         },
         {
             id: 3,
             icon: '3',
-            href: 'https://github.com/HarrisonTorres'
+            href: 'https://www.linkedin.com/in/harrison-s-torres/'
+        },
+        {
+            id: 4,
+            icon: '4',
+            href: 'https://www.youtube.com/channel/UCkwp7H6u6uaWNDcsfwpZwog'
+        },
+        {
+            id: 5,
+            icon: '5',
+            href: '#'
         }
     ])
 

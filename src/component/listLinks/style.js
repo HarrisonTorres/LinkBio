@@ -30,13 +30,23 @@ export const ItenList = styled.li`
     height: 56px;
 
     background-color: ${props => props.theme.ColorGLoss};
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    border: 0px solid rgba(0, 0, 0, 0.5);
     border-color: ${props => props.theme.Color};
 
     backdrop-filter: blur(4px);
-    border-radius: 8px;
+    border-radius: 32px;
     
     z-index:988;
+
+    :hover{
+        border-width: 1px;
+        border-radius: 12px;
+        
+    }
+    :active{
+        border-width: 1px;
+        
+    }
 `;
 
 export const Link = styled.a`
@@ -49,6 +59,9 @@ export const Link = styled.a`
 
     margin-top: 8px;
     margin-bottom:8px;
+    :hover{
+        font-size: 20px;
+    }
 `;  
 
 export const Span = styled.span`
