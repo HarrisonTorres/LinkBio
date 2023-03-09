@@ -18,7 +18,6 @@ function Links() {
   const {links, setLinks} = useContext(RenderContext);
   let variavel = []
   
-   
 
   let endArray = links.slice(-1)
   let endNumberArray = (parseInt(endArray.map(i => i.id)))

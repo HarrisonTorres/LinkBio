@@ -1,8 +1,6 @@
-import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import { BaseURL } from "./axios/config";
-
+import { Router,Route } from "react-router-dom";
 
 
 import BackgroundApp from "./component/background";
@@ -29,7 +27,6 @@ function App(){
 
     const[theme, setTheme] = useState('')
     const themeMode = theme === 'Light' ? Light : Dark;
-   
 
     const themeToggler = () => {
         theme === 'Light' ? setMode('Dark') : setMode('Light')

@@ -4,21 +4,26 @@ import { RenderContext } from "../../contexts/render";
 import { useEffect } from "react";
 import axios from "axios";
 import { BaseURL } from "../../axios/config";
-function ListLinks(){
+import { json, useParams } from "react-router-dom";
 
+function ListLinks(){
     const [data, setData] = useState()
     const [dataLinks, setDataLinks] = useState()
 
     const {links} = useContext(RenderContext);
     const {setLinks} = useContext(RenderContext);
-
     const Alert = () => {
         console.log('Redirecionando!')
     }
 
-    useEffect(() => {
+    //63d68d2c22fe5c179603d765 = id de teste
+    const [idUser, setIdUser] = useState(useParams);
+    const idUserConvert = (idUser.idPost)
+    const urlUser = (BaseURL+'/user/'+idUserConvert);
+    
 
-        axios.get(BaseURL+'/user/63d68d2c22fe5c179603d765')
+    useEffect(() => {
+        axios.get(urlUser)
         .then((response) => {
             setData(response.data.data);
             setLinks(response.data.data.arrayLinks);
@@ -33,7 +38,7 @@ function ListLinks(){
         <Container>
             <List>
                 {links.map(item => item.id &&(
-                        <Link 
+                    <Link 
                         target={"_blank"}
                         key={item.id} 
                         href={item.link}
@@ -43,9 +48,8 @@ function ListLinks(){
                                     {item.nameTitle}
                                 </Span>
                             </ItenList>
-                        </Link>
-                        )
-                    )
+                    </Link>
+                    ))
                 }
                 
             </List>

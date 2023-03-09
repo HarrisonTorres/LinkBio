@@ -11,17 +11,23 @@ import Links from './links';
 import { AiOutlineClose,  } from "react-icons/ai";
 import { ButtonClose, Container, ButtonSave } from './style';
 import { BaseURL } from '../axios/config';
-
-
+import { useParams } from 'react-router-dom';
+import AuthContext from '../contexts/auth';
 
 
 function EditComponentUser(props) {
 
+  const idUserPage = useContext(AuthContext);
   const {links} = useContext(RenderContext)
-  const id = "63d68d2c22fe5c179603d765"
+  
   const setEdit = props.setEdit;
 
   const [close, setClose] = useState(false);
+
+  const [idUser, setIdUser] = useState(useParams);
+  const idUserConvert = (idUser.idPost)
+  const id = idUserConvert;
+  console.log(id)
 
   const handleButtonClose = ()=>{
     setClose(true);
@@ -29,8 +35,9 @@ function EditComponentUser(props) {
   }
   
   const handleButtonSave = () => {//Salvar Atualização dos links no banco de dados
-
+    console.log(id)
     const arrayLinks = links
+    console.log(id)
     axios.put(BaseURL+'/user/update', {id, arrayLinks})
     .then(function(response){
       console.log("Atualizado Com Sucesso")
@@ -38,7 +45,6 @@ function EditComponentUser(props) {
     }).catch((error) => {
       console.log(error)
     })
-
     
   }
 

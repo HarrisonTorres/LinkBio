@@ -15,7 +15,6 @@ export const Input = styled.input`
     border-radius: 8px 8px;
     box-shadow: 0 0 0 0;
     outline: 0px;
-    text-transform: lowercase;
     color: #000;
     :focus{
       border: 1px solid #FF00B8 ;

@@ -18,6 +18,7 @@ function CadastroModal ({modalLogin}){
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPass, setConfirmPass] = useState("")
+    const _id = username;
 
     const [img,ig,list,idLink,title,link,social,idIconSocial,href] = '';
 
@@ -52,6 +53,7 @@ function CadastroModal ({modalLogin}){
         e.preventDefault()
 
         const signUp = {
+            _id,
             username,
             email,
             password,
@@ -68,6 +70,7 @@ function CadastroModal ({modalLogin}){
 
 
         axios.post(BaseURL+'/auth/register', {
+            _id,
             username,
             email,
             password,
@@ -100,19 +103,55 @@ function CadastroModal ({modalLogin}){
         <Container>
                 <h3><AiOutlineUser size={50}/></h3>
                 <Form >
-                    <RangeInput><InputForm  name={'username'} placeholder="Username" type={'text'} value={username} onChange={(event) => setUsername(event.target.value)}/></RangeInput>
+                    <RangeInput>
+                        <InputForm 
+                            name={'username'} 
+                            placeholder="Username" 
+                            type={'text'} 
+                            value={username} 
+                            onChange={(event) => setUsername(event.target.value)}/>
+                    </RangeInput>
 
-                    <RangeInput><InputForm  name={'email'} placeholder="Email" type={'text'} value={email} onChange={(event) => setEmail(event.target.value)}/></RangeInput>
+                    <RangeInput>
+                        <InputForm 
+                        name={'email'} 
+                        placeholder="Email" 
+                        type={'text'} 
+                        value={email} 
+                        onChange={(event) => setEmail(event.target.value)}/>
+                    </RangeInput>
 
-                    <RangeInput><InputForm  name={'password'} placeholder="Senha" type={'password'} value={password} onChange={(event) => setPassword(event.target.value)}/></RangeInput>
+                    <RangeInput>
+                        <InputForm  
+                            name={'password'} 
+                            placeholder="Senha" 
+                            type={'password'} 
+                            value={password} 
+                            onChange={(event) => setPassword(event.target.value)}/>
+                    </RangeInput>
 
-                    <RangeInput><InputForm  name={'confirmPassword'} placeholder="Confirmar Senha" type={'password'} value={confirmPass} onChange={(event) => setConfirmPass(event.target.value)}/></RangeInput>
+                    <RangeInput>
+                        <InputForm 
+                            name={'confirmPassword'} 
+                            placeholder="Confirmar Senha" 
+                            type={'password'} 
+                            value={confirmPass} 
+                            onChange={(event) => setConfirmPass(event.target.value)}/>
+                    </RangeInput>
 
                     {msgErro && <ErroMsg msg={msg} />}
 
-                    <ButtonForm disabled={disableButton} type='submit' title='Cadastrar' onClick={submitForm}/>
+                    <ButtonForm 
+                        disabled={disableButton} 
+                        type='submit' 
+                        title='Cadastrar' 
+                        onClick={submitForm}
+                    />
                 </Form>
-                <a href='#' onClick={modalLogin}>Já tenho uma conta. <span>Entrar</span></a>
+                <a 
+                    href='#' 
+                    onClick={modalLogin}>Já tenho uma conta. <span>Entrar</span>
+                </a>
         </Container>
     )
 };

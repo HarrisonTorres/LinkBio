@@ -5,6 +5,7 @@ export const AuthContext = createContext({});
 function AuthProvider({children}){
 
     const [userOn, setUserOn] = useState(false)
+    const [token, setToken] = useState('');
 
     function readerButtonEdit(){
         setUserOn(true)
@@ -20,9 +21,10 @@ function AuthProvider({children}){
         setIsOpen(false)
     }
     
+    const [idUserPage, setIdUserPage] = useState('') //Variavel que recebe o ID do usuario no login e passa esse id para a url.
 
     return(
-        <AuthContext.Provider value={{userOn, isOpen, readerButtonEdit, handleOpen, handleClose}}>
+        <AuthContext.Provider value={{userOn, isOpen, readerButtonEdit, handleOpen, handleClose, token, setToken, idUserPage, setIdUserPage}}>
             {children}
         </AuthContext.Provider>
     )

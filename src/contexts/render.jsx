@@ -1,4 +1,6 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { BaseURL } from "../axios/config";
 
 export const RenderContext = createContext({});
 
@@ -43,7 +45,6 @@ function RenderProvider({children}){
         }
     ])
 
-    
 
     return(
         <RenderContext.Provider value={{profile, setProfile, links, setLinks, social, setSocial}}>
