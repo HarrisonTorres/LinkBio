@@ -24,10 +24,10 @@ function EditComponentUser(props) {
 
   const [close, setClose] = useState(false);
 
+  //Pega o :id da url
   const [idUser, setIdUser] = useState(useParams);
-  const idUserConvert = (idUser.idPost)
-  const id = idUserConvert;
-  console.log(id)
+  const idUserConvert = (idUser.idPost) //Desestruturando o dado pego pelo user params
+  const id = idUserConvert; // recebe o valor da url
 
   const handleButtonClose = ()=>{
     setClose(true);

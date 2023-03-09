@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { Router,Route } from "react-router-dom";
 
-
 import BackgroundApp from "./component/background";
 
 //components
